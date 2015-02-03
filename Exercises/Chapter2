@@ -1,0 +1,113 @@
+// Excercises found at the bottom of: http://eloquentjavascript.net/02_program_structure.html
+
+//Looping a Triangle
+
+/*
+var hash =  "#";
+
+for (var counter = 1; counter < 8; counter++) { 
+  console.log(hash); 
+  var hash = hash + "#"; 
+}
+
+*/
+
+
+
+//FizzBuzz
+
+/*
+for (var counter = 1; counter <= 100; counter++) {
+  if (((counter % 3) == 0 ) && ((counter % 5) == 0))
+    console.log("FizzBuzz");
+  else if ((counter % 3) == 0)
+    console.log("Fizz");
+  else if ((counter % 5) == 0)
+    console.log("Buzz");
+  else
+    console.log(counter);
+}
+*/
+
+
+
+//Chess Board
+
+//  First Iteration
+/* 
+var board = " # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n";
+console.log(board); 
+*/
+
+//  Second Iteration
+/* 
+var board = " # # # #\n# # # # \n";
+
+for (var repeat = 1; repeat <=3; repeat++){
+  board += " # # # #\n# # # # \n";
+}
+console.log(board); 
+*/
+
+//  Third Iteration
+/* 
+var board = "";
+
+for (var repeat = 1; repeat <=8; repeat++){
+  if (repeat % 2 !=0)
+    board += " # # # #\n";
+  else if (repeat % 2 == 0)
+    board += "# # # # \n";
+  else {
+    console.log("Eroor!");
+    break;
+  }
+}
+console.log(board);
+*/
+
+//  Fourth Iteration: user input of grid size, Exercise SUCCESS!!
+/*
+board = "";
+var grid = Number(prompt("Pick a number to size your checker board",""));
+
+for (var col = 1; col <= grid; col++){
+  if (col % 2 != 0)
+    for (var row = 1; row <=grid; row++){
+      if (row % 2 !=0)
+        board += " ";
+      else
+        board += "#";
+      if (row == grid)
+        board += "\n";
+    }
+  else
+    for (var row = 1; row <=grid; row++){
+      if (row % 2 !=0)
+        board += "#";
+      else
+        board += " ";
+      if (row == grid)
+        board += "\n";
+    }
+}
+console.log(board);
+*/
+
+//  Bonus Iteration: smaller code, (after looking at author solution)
+/*
+var board = "";
+var grid = Number(prompt("Pick a number to size your checker board",""));
+
+for (var col = 1; col <= grid; col++){
+  for (var row = 1; row <=grid; row++){
+    if ((row + col) % 2 =0)
+      board += " ";
+    else
+      board += "#";
+  }
+  board += "\n"; 
+
+}
+console.log(board);
+*/
